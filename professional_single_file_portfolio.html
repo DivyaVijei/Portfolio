@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Portfolio of DIVYA VIJEI TAKKELLAPATI — Associate SAP PS Consultant, MSc Computer Science graduate and technology professional currently working in Mumbai, India.">
+
+<meta name="author" content="DIVYA VIJEI TAKKELLAPATI">
+
+<title>DIVYA VIJEI TAKKELLAPATI | Associate SAP PS Consultant</title>
+
+<style>
+
+/* =========================================================
+   ROOT / THEME
+========================================================= */
+
+:root{
+  --bg:#101522;
+  --bg-soft:#151c2c;
+
+  --panel:rgba(255,255,255,.075);
+  --panel2:rgba(255,255,255,.115);
+
+  --text:#f8fbff;
+  --muted:#b7c1d1;
+  --muted2:#8f9aae;
+
+  --line:rgba(255,255,255,.14);
+
+  --accent:#8b72ff;
+  --accent2:#39d8ff;
+  --accent3:#b69cff;
+
+  --success:#57e0ad;
+
+  --max:1180px;
+  --radius:26px;
+}
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+body.light-mode{
+  --bg:#f6f8fc;
+  --bg-soft:#ffffff;
+
+  --panel:rgba(30,40,65,.045);
+  --panel2:rgba(30,40,65,.085);
+
+  --text:#172033;
+  --muted:#4f5d73;
+  --muted2:#68758a;
+
+  --line:rgba(23,32,51,.14);
+
+  --accent:#6547e8;
+  --accent2:#008eaf;
+  --accent3:#7052dc;
+
+  --success:#087f5b;
+}
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
+
+.theme-controls{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.theme-toggle{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--line);
+  border-radius:50%;
+
+  background:var(--panel);
+  color:var(--text);
+
+  font-size:1rem;
+
+  cursor:pointer;
+
+  transition:
+    transform .35s ease,
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease;
+}
+
+.theme-toggle:hover{
+  transform:rotate(20deg) scale(1.08);
+
+  background:var(--panel2);
+
+  color:var(--accent);
+
+  box-shadow:
+    0 8px 25px rgba(139,114,255,.2);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color:var(--text);
+  background:
+
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139,114,255,.22),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(57,216,255,.14),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(182,156,255,.09),
+      transparent 35%
+    ),
+
+    var(--bg);
+
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body::before{
+  ...
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    );
+}
+
+body.light-mode::before{
+  background-image:
+    linear-gradient(
+      rgba(23,32,51,.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23,32,51,.045) 1px,
+      transparent 1px
+    );
+}
+
+  background-size:55px 55px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 80%
+    );
+
+  z-index:-1;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:min(
+    calc(100% - 40px),
+    var(--max)
+  );
+
+  margin:auto;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:min(
+    calc(100% - 30px),
+    1020px
+  );
+
+  z-index:100;
+
+  padding:10px 12px;
+
+  border:1px solid var(--line);
+
+  background:color-mix(
+  in srgb,
+  var(--bg) 78%,
+  transparent
+  );
+  body.light-mode nav{
+  background:rgba(255,255,255,.82);
+
+  box-shadow:
+    0 20px 70px rgba(30,40,70,.12);
+  }
+
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+
+  border-radius:999px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  box-shadow:
+    0 20px 70px rgba(0,0,0,.28);
+}
+
+.logo{
+  font-weight:900;
+  letter-spacing:-.04em;
+  padding-left:12px;
+  white-space:nowrap;
+}
+
+.logo span{
+  display:none;
+}
+
+.logo i{
+  font-style:normal;
+  color:var(--accent2);
+}
+
+.navlinks{
+  display:flex;
+  gap:4px;
+}
+
+.navlinks a{
+  padding:9px 14px;
+  border-radius:999px;
+
+  color:var(--muted);
+
+  font-size:.88rem;
+
+  transition:
+    .35s ease;
+}
+
+.navlinks a:hover{
+  color:var(--text);
+  background:var(--panel2);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  padding:13px 19px;
+
+  border-radius:999px;
+
+  border:1px solid var(--line);
+
+  font-weight:750;
+  font-size:.9rem;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(139,114,255,.25);
+}
+
+.primary{
+  border:0;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--accent),
+      #a78cff
+    );
+
+  color:#fff;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:100vh;
+
+  display:grid;
+  place-items:center;
+
+  padding:
+    150px
+    0
+    90px;
+
+  position:relative;
+}
+
+.hero-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.15fr
+    .85fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.eyebrow{
+  color:var(--accent2);
+
+  font-weight:850;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+
+  font-size:.75rem;
+
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:
+    clamp(
+      3.4rem,
+      8vw,
+      7rem
+    );
+
+  line-height:.91;
+
+  letter-spacing:-.075em;
+
+  max-width:850px;
+}
+
+h1 span{
+  background:
+    linear-gradient(
+      110deg,
+      var(--text),
+      var(--accent2),
+      var(--accent3)
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero h2{
+  margin-top:18px;
+
+  color:var(--accent);
+
+  font-size:clamp(
+    1.15rem,
+    2vw,
+    1.55rem
+  );
+
+  font-weight:750;
+
+  letter-spacing:-.02em;
+}
+.hero p{
+  color:var(--muted);
+
+  font-size:1.1rem;
+
+  max-width:670px;
+
+  margin:28px 0;
+}
+
+.hero p strong{
+  color:var(--text);
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.profile-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.profile-frame{
+  width:min(
+    360px,
+    78vw
+  );
+
+  aspect-ratio:1;
+
+  border-radius:50%;
+
+  padding:10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(139,114,255,.9),
+      rgba(57,216,255,.75)
+    );
+
+  box-shadow:
+    0 0 90px
+    rgba(139,114,255,.25);
+}
+
+.profile-image{
+  width:100%;
+  height:100%;
+
+  border-radius:50%;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(139,114,255,.28),
+      transparent 40%
+    ),
+    var(--bg-soft);
+
+  display:grid;
+  place-items:center;
+
+  border:5px solid var(--bg);
+}
+
+.profile-image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  position: relative;
+  top: -70px; 
+}
+
+.image-placeholder{
+  text-align:center;
+  padding:30px;
+
+  color:var(--muted);
+}
+
+.image-placeholder strong{
+  display:block;
+
+  color:#fff;
+
+  font-size:1rem;
+
+  margin-bottom:7px;
+}
+
+.image-placeholder span{
+  font-size:.8rem;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+  padding:110px 0;
+}
+
+.section-head{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  align-items:end;
+
+  margin-bottom:38px;
+}
+
+.section-head h2{
+  font-size:
+    clamp(
+      2.3rem,
+      5vw,
+      4.2rem
+    );
+
+  letter-spacing:-.06em;
+
+  line-height:1;
+}
+
+.section-head p{
+  color:var(--muted);
+
+  max-width:550px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:16px;
+}
+
+.card{
+  padding:30px;
+
+  border:
+    1px solid var(--line);
+
+ background:
+  linear-gradient(
+    145deg,
+    var(--panel),
+    var(--panel2)
+  );
+
+  border-radius:var(--radius);
+
+  transition:
+    transform .5s ease,
+    border-color .4s ease,
+    background .4s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  background:var(--accent);
+
+  filter:blur(90px);
+
+  opacity:0;
+
+  transition:.5s;
+
+  right:-80px;
+  top:-80px;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(139,114,255,.5);
+
+  background:var(--panel2);
+}
+
+.card:hover::before{
+  opacity:.18;
+}
+
+.card > *{
+  position:relative;
+}
+
+.num{
+  font-size:.73rem;
+
+  color:var(--accent2);
+
+  font-weight:850;
+
+  letter-spacing:.15em;
+}
+
+.card h3{
+  margin:
+    28px
+    0
+    10px;
+
+  font-size:1.3rem;
+}
+
+.card p{
+  color:var(--muted);
+
+  font-size:.94rem;
+}
+/* ================================
+   RESPONSIVE EXPERIENCE SECTION
+   ================================ */
+.experience {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.experience .item {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.experience .item-content {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.experience .item-content p,
+.experience .item-content li {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.experience .item-content {
+  font-size: clamp(0.88rem, 1.1vw, 1rem);
+  line-height: 1.7;
+}
+
+.experience .item-content ul {
+  padding-left: clamp(18px, 2vw, 28px);
+  margin-top: 12px;
+}
+
+.experience .item-content li {
+  margin-bottom: 9px;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:22px;
+}
+
+.skill{
+  display:inline-block;
+
+  border:1px solid var(--line);
+
+  border-radius:20px;
+
+  color:var(--text);
+
+  background:var(--panel);
+
+  font-size:.8rem;
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+}
+
+.skill:hover{
+  background:var(--panel2);
+  border-color:var(--accent);
+  transform:translateY(-2px);
+}
+
+/* =========================================================
+   EXPERIENCE / PROJECT
+========================================================= */
+
+.project{
+  display:grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  overflow:hidden;
+
+  background:var(--panel);
+
+  margin-bottom:16px;
+
+  min-height:330px;
+}
+
+.project:nth-child(even)
+.project-visual{
+  order:2;
+}
+
+.project-copy{
+  padding:45px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.project-copy h3{
+  font-size:2rem;
+
+  letter-spacing:-.04em;
+
+  margin-top:8px;
+}
+
+.project-copy p{
+  color:var(--muted);
+
+  margin:
+    14px
+    0
+    22px;
+}
+
+.project-visual{
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(139,114,255,.25),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      var(--panel2),
+      var(--bg-soft)
+    );
+
+  display:grid;
+  place-items:center;
+
+  font-size:5rem;
+  color:var(--accent);
+}
+.tags{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+}
+
+.tag{
+  border:1px solid var(--line);
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  color:var(--muted);
+
+  background:var(--panel);
+
+  font-size:.76rem;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+  border-left:
+    1px solid var(--line);
+
+  padding-left:30px;
+}
+
+.item{
+  position:relative;
+
+  margin-bottom:42px;
+}
+
+.item::before{
+  content:"";
+
+  position:absolute;
+
+  width:11px;
+  height:11px;
+
+  border-radius:50%;
+
+  background:var(--accent);
+
+  left:-36px;
+  top:8px;
+
+  box-shadow:
+    0 0 22px
+    rgba(139,114,255,.9);
+}
+
+.item small{
+  color:var(--accent2);
+
+  font-weight:850;
+
+  letter-spacing:.06em;
+}
+
+.item h3{
+  margin:7px 0 4px;
+
+  font-size:1.3rem;
+}
+
+.item .company{
+  color:var(--text);
+  font-weight:650;
+  margin-bottom:7px;
+}
+
+.item p{
+  color:var(--muted);
+
+  max-width:760px;
+}
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-grid{
+   display: grid;
+  grid-template-columns: minmax(170px, 0.32fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 55px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.education-card{
+  padding:30px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  background:var(--panel);
+}
+
+.education-card small{
+  color:var(--accent2);
+
+  font-weight:800;
+}
+
+.education-card h3{
+  font-size:1.4rem;
+
+  margin:10px 0 5px;
+}
+
+.education-card p{
+  color:var(--muted);
+}
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.cert-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:16px;
+}
+
+.cert{
+  padding:25px;
+
+  border:
+    1px solid var(--line);
+
+ background:var(--panel);
+
+  border-radius:20px;
+}
+
+.cert h3{
+  font-size:1rem;
+
+  margin-bottom:5px;
+}
+
+.cert p{
+  color:var(--muted);
+
+  font-size:.88rem;
+}
+
+.cert .issuer{
+  color:var(--accent2);
+
+  font-size:.78rem;
+
+  font-weight:750;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+  padding:70px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:32px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,114,255,.16),
+      rgba(57,216,255,.07)
+    );
+}
+
+.contact h2{
+  font-size:
+    clamp(
+      2.5rem,
+      6vw,
+      5rem
+    );
+
+  letter-spacing:-.07em;
+
+  line-height:.95;
+}
+
+.contact h2 span{
+  color:var(--accent2);
+}
+
+.contact p{
+  color:var(--muted);
+
+  margin:
+    20px
+    auto
+    28px;
+
+  max-width:650px;
+}
+
+.contact-details{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin:
+    0
+    0
+    28px;
+}
+
+.contact-chip{
+  padding:10px 15px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:999px;
+
+   color:var(--text);
+
+  background:var(--panel);
+
+  font-size:.85rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:
+    40px
+    0
+    60px;
+
+  color:var(--muted2);
+
+  font-size:.82rem;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal{
+  opacity:0;
+
+  transform:
+    translateY(35px);
+
+  transition:
+    opacity .9s ease,
+    transform .9s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.show{
+  opacity:1;
+
+  transform:none;
+}
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.cursor{
+  position:fixed;
+
+  width:20px;
+  height:20px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.75);
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  z-index:1000;
+
+  transform:
+    translate(-50%,-50%);
+
+  transition:
+    width .25s,
+    height .25s,
+    background .25s;
+
+  mix-blend-mode:difference;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+  .hero-grid,
+  .project{
+    grid-template-columns:1fr;
+  }
+
+  .profile-area{
+    order:-1;
+  }
+
+  .profile-frame{
+    width:245px;
+  }
+
+  .hero{
+    padding-top:130px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .education-grid,
+  .cert-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project:nth-child(even)
+  .project-visual{
+    order:0;
+  }
+
+  .project-copy{
+    padding:30px;
+  }
+
+  .navlinks a{
+    display:none;
+  }
+
+  .navlinks a:last-child{
+    display:block;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head p{
+    margin-top:16px;
+  }
+
+  footer{
+    display:block;
+  }
+
+  footer span{
+    display:block;
+
+    margin-top:8px;
+  }
+}
+
+@media(max-width:560px){
+
+  nav{
+    width:
+      calc(100% - 20px);
+  }
+
+  .logo{
+    font-size:.78rem;
+  }
+
+  nav .primary{
+    padding:
+      10px
+      13px;
+
+    font-size:.78rem;
+  }
+
+  .hero{
+    padding:
+      120px
+      0
+      70px;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  section{
+    padding:80px 0;
+  }
+
+  .contact{
+    padding:40px 22px;
+  }
+
+  .contact-details{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .contact-chip{
+    overflow-wrap:anywhere;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+
+    transition:none!important;
+
+    scroll-behavior:auto!important;
+  }
+
+  .reveal{
+    opacity:1;
+
+    transform:none;
+  }
+}
+@media (max-width: 850px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 32px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =======================================================
+     CUSTOM CURSOR
+======================================================== -->
+
+<div class="cursor"></div>
+
+
+<!-- =======================================================
+     NAVIGATION
+======================================================== -->
+
+<nav>
+
+  <a class="logo" href="#home">
+    DIVYA VIJEI TAKKELLAPATI
+    <i>·</i>
+  </a>
+
+  <div class="navlinks">
+
+    <a href="#about">About</a>
+
+    <a href="#experience">Experience</a>
+
+    <a href="#education">Education</a>
+
+    <a href="#certifications">Certifications</a>
+
+    <a href="#contact">Contact</a>
+
+  </div>
+
+  <div class="theme-controls">
+
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle dark and light mode"
+  >
+    ☀️
+  </button>
+
+  <a
+    class="btn primary"
+    href="#contact"
+  >
+    Connect ↗
+  </a>
+
+</div>
+
+</nav>
+
+
+<main id="home">
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        Portfolio / 2026
+      </div>
+
+      <h1>
+        DIVYA VIJEI TAKKELLAPATI
+      </h1>
+      
+      <h2>
+        Associate SAP PS Consultant
+      </h2>
+
+      <p>
+        I'm
+        <strong>
+          DIVYA VIJEI TAKKELLAPATI
+        </strong>,
+        an
+        <strong>
+          Associate SAP PS Consultant
+        </strong>
+        based in Mumbai, India, with a background in Computer Science
+        and experience across technology and machine learning.
+      </p>
+
+      <div class="actions">
+
+        <a
+          class="btn primary"
+          href="#experience"
+        >
+          Explore my experience ↓
+        </a>
+
+        <a
+          class="btn"
+          href="mailto:divyavijeitakkellapati@gmail.com"
+        >
+          Email me
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PROFILE IMAGE -->
+
+    <div class="profile-area reveal">
+
+      <div class="profile-frame">
+
+        <div class="profile-image">
+
+         <img
+  	   src="profile.png"
+	   alt="DIVYA VIJEI TAKKELLAPATI"
+	>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT
+======================================================== -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <h2>
+        About me.
+      </h2>
+
+      <p>
+        Computer Science postgraduate with professional experience
+        in SAP Project Systems and an earlier background in
+        Machine Learning. Interested in technology, enterprise
+        solutions and building practical digital experiences.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <article class="card reveal">
+
+        <span class="num">
+          01 / PROFILE
+        </span>
+
+        <h3>
+          Who I am
+        </h3>
+
+        <p>
+          A Computer Science
+          postgraduate and technology professional currently
+          working as an Associate SAP PS Consultant at
+          Highbar Technocrat | SAP Gold Partner.
+        </p>
+
+      </article>
+
+
+      <article class="card reveal">
+
+        <span class="num">
+          02 / FOCUS
+        </span>
+
+        <h3>
+          What I do
+        </h3>
+
+        <p>
+          I work in the SAP Project Systems space while bringing
+          an academic and practical foundation in Computer Science,
+          software development, cloud technologies and machine
+          learning.
+        </p>
+
+      </article>
+
+
+      <article class="card reveal">
+
+        <span class="num">
+          03 / LOCATION
+        </span>
+
+        <h3>
+          Currently based in Mumbai
+        </h3>
+
+        <p>
+        Open to opportunities in Hyderabad & Bengaluru
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- SKILLS / AREAS -->
+
+    <div style="margin-top:35px;" class="reveal">
+
+      <span class="num">
+        TECHNOLOGY & AREAS
+      </span>
+
+      <div class="skills">
+
+        <span class="skill">SAP PS</span>
+        <span class="skill">Software Development</span>
+        <span class="skill">Database Fundamentals</span>
+        <span class="skill">Microsoft Azure</span>
+        <span class="skill">AWS Cloud</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     EXPERIENCE
+======================================================== -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <h2>
+        Experience.
+      </h2>
+
+      <p>
+        A concise view of my professional journey,
+        from early experience in Machine Learning to my
+        current role in SAP Project Systems.
+      </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <!-- CURRENT ROLE -->
+
+      <div class="item reveal">
+
+        <small>
+          JAN 2026 — PRESENT
+        </small>
+
+        <h3>
+          Associate SAP PS Consultant
+        </h3>
+
+        <div class="company">
+          Highbar Technocrat | SAP Gold Partner - Brihanmumbai Electric Supply & Transport (BEST) | SAP Implementation Project
+        </div>
+
+        <p>
+         - Contributing to the implementation of SAP Project System (PS) for a large-scale public utility organization.
+	</p>
+
+        <p>
+	 - Participating in requirement gathering, and solution design for project-management processes.
+	</p>
+        <p>
+	 - Supporting SAP PS configuration for Project Definitions, WBS Elements, Networks, Activities, Milestones, project planning, budgeting, and cost monitoring.
+        </p>
+        <p>
+	 - Working on WBS structure and project master-data design to support project planning, execution, cost tracking, and reporting.
+	</p>
+	<p>
+	 - Supporting project budgeting, availability control, cost planning, commitments, and actual-cost monitoring.
+	</p>
+	<p>
+	 - Assisting with integration of SAP PS with FI, CO, MM, and other relevant SAP modules for end-to-end project processes.
+	</p>
+	<p>
+   	 - Participating in unit testing, integration testing, UAT, regression testing, and defect resolution.
+	</p>
+	<p>
+	 - Preparing and maintaining business process documents, functional specifications, configuration documents, test scripts, and user documentation.
+	</p>
+	<p>
+	 - Supporting business stakeholders and key users by analyzing SAP PS requirements and providing functional solutions.
+	</p>
+	<p>
+	 - Collaborating with cross-functional SAP teams, technical consultants, and business stakeholders to resolve process and system issues.
+	</p>
+	<p>
+	 - Supporting data validation, cutover, go-live, and post-go-live activities as part of the SAP implementation lifecycle.
+	</p>
+	<p>
+	 - Contributing to continuous improvement of SAP PS processes through requirement analysis, issue resolution, documentation, and user support.
+        </p>
+
+      </div>
+
+
+      <!-- MACHINE LEARNING -->
+
+      <div class="item reveal">
+
+        <small>
+          MAY 2022 — JUL 2022
+        </small>
+
+        <h3>
+          Machine Learning Intern
+        </h3>
+
+        <div class="company">
+          Indian Servers — Software Development Company
+        </div>
+
+        <p>
+         - Internship experience focused on Machine Learning
+          within a software development environment.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     EDUCATION
+======================================================== -->
+
+<section id="education">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <h2>
+        Education.
+      </h2>
+
+      <p>
+        Academic background in Computer Science and
+        technology, spanning undergraduate and postgraduate study.
+      </p>
+
+    </div>
+
+
+    <div class="education-grid">
+
+
+      <!-- MSc -->
+
+      <article class="education-card reveal">
+
+        <small>
+          2023 — 2025
+        </small>
+
+        <h3>
+          Master of Science — Computer Science
+        </h3>
+
+        <p>
+          University of Hertfordshire
+        </p>
+
+      </article>
+
+
+      <!-- BTech -->
+
+      <article class="education-card reveal">
+
+        <small>
+          2019 — 2023
+        </small>
+
+        <h3>
+          Bachelor of Technology — Computer Science & Engineering
+        </h3>
+
+        <p>
+          R.V.R. & J.C. College of Engineering
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     CERTIFICATIONS
+======================================================== -->
+
+<section id="certifications">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <h2>
+        Certifications.
+      </h2>
+
+      <p>
+        Selected certifications and professional learning
+        credentials visible on my public professional profile.
+      </p>
+
+    </div>
+
+
+    <div class="cert-grid">
+
+
+      <article class="cert reveal">
+
+        <div class="issuer">
+          MICROSOFT
+        </div>
+
+        <h3>
+          Microsoft Certified: Azure Fundamentals
+        </h3>
+
+        <p>
+          Issued July 2025
+        </p>
+
+      </article>
+
+
+      <article class="cert reveal">
+
+        <div class="issuer">
+          MICROSOFT
+        </div>
+
+        <h3>
+          MTA: Database Fundamentals
+        </h3>
+
+        <p>
+          Certified 2022 · Issued June 2022
+        </p>
+
+      </article>
+
+
+      <article class="cert reveal">
+
+        <div class="issuer">
+          AMAZON WEB SERVICES
+        </div>
+
+        <h3>
+          AWS Academy Graduate —
+          AWS Academy Cloud Foundations
+        </h3>
+
+        <p>
+          Issued March 2022
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     SELECTED WORK / PROFESSIONAL FOCUS
+======================================================== -->
+
+<section id="work">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <h2>
+        What I work with.
+      </h2>
+
+      <p>
+        A portfolio section designed to grow with your
+        professional projects, SAP implementations and
+        technology work.
+      </p>
+
+    </div>
+
+
+    <div class="project reveal">
+
+      <div class="project-copy">
+
+        <small class="num">
+          CURRENT FOCUS
+        </small>
+
+        <h3>
+          SAP Project Systems
+        </h3>
+
+        <p>
+          Professional focus on SAP PS as an Associate
+          SAP PS Consultant, working within an enterprise
+          technology environment.
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">
+            SAP PS
+          </span>
+
+          <span class="tag">
+            Enterprise Technology
+          </span>
+
+          <span class="tag">
+            Project Systems
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="project-visual">
+        SAP
+      </div>
+
+    </div>
+
+
+   
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+======================================================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact reveal">
+
+      <h2>
+        Let's connect
+      </h2>
+
+      <p>
+        I'm open to professional opportunities,
+        and conversations around
+        SAP, technology, software and digital solutions.
+      </p>
+
+
+      <div class="contact-details">
+
+        <div class="contact-chip">
+          📍 Mumbai, Maharashtra, India
+        </div>
+
+        <div class="contact-chip">
+          📞 +91 8639705023
+        </div>
+
+        <div class="contact-chip">
+          ✉ divyavijeitakkellapati@gmail.com
+        </div>
+
+      </div>
+
+
+      <div
+        class="actions"
+        style="justify-content:center;"
+      >
+
+        <a
+          class="btn primary"
+          href="mailto:divyavijeitakkellapati@gmail.com"
+        >
+          Email me ↗
+        </a>
+
+        <a
+          class="btn"
+          href="tel:+918639705023"
+        >
+          Call me ↗
+        </a>
+
+        <a
+          class="btn"
+          href="https://in.linkedin.com/in/divya-vijei-takkellapati"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer class="container">
+
+  <span>
+    © 2026 DIVYA VIJEI TAKKELLAPATI
+  </span>
+
+  <span>
+    Associate SAP PS Consultant · Mumbai, India
+  </span>
+
+</footer>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+
+<script>
+
+/* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+const cursor =
+  document.querySelector(".cursor");
+
+if (
+  cursor &&
+  window.matchMedia("(pointer:fine)").matches
+){
+
+  window.addEventListener(
+    "pointermove",
+    (e) => {
+
+      cursor.style.left =
+        e.clientX + "px";
+
+      cursor.style.top =
+        e.clientY + "px";
+
+    }
+  );
+
+
+  document
+    .querySelectorAll("a,.btn")
+    .forEach((el) => {
+
+      el.addEventListener(
+        "mouseenter",
+        () => {
+
+          cursor.style.width =
+            "38px";
+
+          cursor.style.height =
+            "38px";
+
+          cursor.style.background =
+            "rgba(255,255,255,.08)";
+
+        }
+      );
+
+
+      el.addEventListener(
+        "mouseleave",
+        () => {
+
+          cursor.style.width =
+            "20px";
+
+          cursor.style.height =
+            "20px";
+
+          cursor.style.background =
+            "transparent";
+
+        }
+      );
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach(
+        (entry) => {
+
+          if (
+            entry.isIntersecting
+          ){
+
+            entry.target
+              .classList
+              .add("show");
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(
+    (el,i) => {
+
+      el.style.transitionDelay =
+        Math.min(
+          i * 45,
+          300
+        ) + "ms";
+
+      observer.observe(el);
+
+    }
+  );
+
+
+/* =========================================================
+   SMOOTH INTERNAL NAVIGATION
+========================================================= */
+
+document
+  .querySelectorAll(
+    'a[href^="#"]'
+  )
+  .forEach(
+    (a) => {
+
+      a.addEventListener(
+        "click",
+        (e) => {
+
+          const target =
+            document.querySelector(
+              a.getAttribute("href")
+            );
+
+          if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+              behavior:"smooth"
+            });
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
+
+const navItems =
+  document.querySelectorAll(
+    ".navlinks a"
+  );
+
+
+const sectionObserver =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach(
+        (entry) => {
+
+          if(
+            entry.isIntersecting
+          ){
+
+            navItems.forEach(
+              (link) => {
+
+                link.style.color =
+                  "var(--muted)";
+
+              }
+            );
+
+            const active =
+              document.querySelector(
+                `.navlinks a[href="#${entry.target.id}"]`
+              );
+
+            if(active){
+
+              active.style.color =
+  "var(--accent)";
+
+            }
+
+          }
+
+        }
+      );
+
+    },
+
+    {
+      threshold:.35
+    }
+  );
+
+
+sections.forEach(
+  sectionObserver.observe.bind(
+    sectionObserver
+  )
+);
+/* =========================================================
+   DARK / LIGHT MODE
+========================================================= */
+
+const themeToggle =
+  document.getElementById("themeToggle");
+
+const savedTheme =
+  localStorage.getItem("portfolio-theme");
+
+if(savedTheme === "light"){
+  document.body.classList.add("light-mode");
+  themeToggle.textContent = "🌙";
+}
+
+themeToggle.addEventListener("click", () => {
+
+  document.body.classList.toggle("light-mode");
+
+  const isLight =
+    document.body.classList.contains("light-mode");
+
+  themeToggle.textContent =
+    isLight ? "🌙" : "☀️";
+
+  localStorage.setItem(
+    "portfolio-theme",
+    isLight ? "light" : "dark"
+  );
+
+});
+
+</script>
+
+</body>
+</html>
